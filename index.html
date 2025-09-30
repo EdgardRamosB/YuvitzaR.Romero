@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yuvitza R. Romero</title>
+  <meta name="description" content="Atención ginecológica con calidez y profesionalismo. Reserva por WhatsApp." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="imagenes/logo yuvi.png" alt="Logo" class="logo-header">
+        <div class="brand-text">
+          <div class="brand-name">Yuvitza R. Romero</div>
+          <div class="brand-sub">Ginecología & Obstetricia</div>
+        </div>
+      </div>
+
+      <!-- Navegación principal (visible en desktop) -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <!-- <a href="#carrusel">Galería</a> -->
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotras">Nosotras</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Acciones (WhatsApp + burger para móvil) -->
+      <div class="actions">
+        <!-- <a id="whatsHeader" class="btn btn-whatsapp" href="https://wa.me/51927486134" target="_blank" aria-label="Contactar por WhatsApp">WhatsApp</a> -->
+
+        <!-- botón burger visible en móvil -->
+        <button id="burgerBtn" class="burger" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu: queda fuera del header-inner para ocupar ancho completo -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="#inicio">Inicio</a>
+      <!-- <a href="#carrusel">Galería</a> -->
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+      <!-- <a id="whatsMobile" class="btn btn-whatsapp" href="https://wa.me/51927486134" target="_blank">WhatsApp</a> -->
+    </div>
+  </header>
+
+
+
+  <!-- HERO -->
+  <main>
+    <!-- IMAGE CAROUSEL -->
+      <div class="carrusel">
+        <div class="carrusel-contenedor">
+          <div class="carrusel-item"><img src="./imagenes/pareja.fw.png" alt="Imagen 1" /></div>
+          <div class="carrusel-item"><img src="./imagenes/doctora.fw.png" alt="Imagen 2" /></div>
+          <div class="carrusel-item"><img src="./imagenes/niño.fw.png" alt="Imagen 3" /></div>
+          <div class="carrusel-item"><img src="./imagenes/mamapanza.fw.png" alt="Imagen 4" /></div>
+          <div class="carrusel-item"><img src="/imagenes/yuviamiga.png" alt="Imagen 5" /></div>
+        </div>
+        <div class="carrusel-texto">¡OFERTAS ESPECIALES SOLO POR HOY!</div>
+        <div class="carrusel-texto2">¡El amor propio empieza por una misma!</div>
+
+        <!-- Botones -->
+        <button class="btn-slide prev">&#10094;</button>
+        <button class="btn-slide next">&#10095;</button>
+
+      </div>
+
+
+    <!-- Bienvenida Mejorada -->
+    <section id="inicio" class="hero spa-hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <small class="eyebrow spa-eyebrow">🌷 Bienvenida</small>
+          <h1 class="spa-title">Cuidamos de ti con calidez, ciencia y elegancia</h1>
+          <p class="lead">Chequeos preventivos, ecografías y control del embarazo con un trato humano y profesional.</p>
+
+          <div class="hero-ctas">
+            <a id="heroWhats" class="btn btn-primary spa-btn" href="https://wa.me/51927486134" target="_blank">✨ Reservar cita</a>
+            <a class="btn btn-outline spa-outline" href="#servicios">Ver servicios</a>
+          </div>
+
+          <ul class="contact-inline spa-contact">
+            <li>📍 <strong id="addressText">{{DIRECCION}}</strong></li>
+            <li>🕒 Lun - Sáb · 9:00 - 19:00</li>
+          </ul>
+        </div>
+
+      <aside class="hero-card">
+        <h3>Solicita tu cita</h3>
+        <p class="muted">Completa y recibirás un mensaje en WhatsApp con los datos.</p>
+
+        <form id="bookingForm" class="form-grid form-dorado" autocomplete="off">
+          <label class="input-icon">
+            <span class="icon">🪪</span>
+            <input id="b_name" name="nombre" required placeholder="Tu nombre" />
+          </label>
+
+          <label class="input-icon">
+            <span class="icon">☎️</span>
+            <input id="b_phone" name="telefono" required placeholder="9XXXXXXXX" />
+          </label>
+
+          <label class="input-icon">
+            <span class="icon">💬</span>
+            <select id="b_reason" name="motivo">
+              <option>Consulta ginecológica</option>
+              <option>Chequeo preventivo</option>
+              <option>Ecografía ginecológica</option>
+              <option>Ecografía obstétrica</option>
+              <option>Resultados / Control</option>
+            </select>
+          </label>
+
+          <label class="input-icon">
+            <span class="icon">🗓️</span>
+            <input id="b_date" type="date" name="fecha" />
+          </label>
+
+          <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+          <div class="small-muted">* Te responderemos a la brevedad en horario de atención.</div>
+        </form>
+
+      </aside>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- SERVICES -->
+    <!-- SERVICES -->
+    <section id="servicios" class="section servicios-glam">
+      <div class="container">
+        <div class="section-head">
+          <small class="eyebrow">Servicios</small>
+          <h2>🌷 Bienestar y salud para cada etapa de tu vida</h2>
+          <p class="muted">Procedimientos y evaluaciones con enfoque preventivo.</p>
+        </div>
+
+        <div class="cards-grid glam-grid">
+          <article class="card service glam-card">
+            <div class="glam-icon">
+              <!-- Icono de estetoscopio -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2v6a6 6 0 0 0 12 0V2"></path>
+                <circle cx="12" cy="18" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Consulta Ginecológica</h3>
+            <p class="muted">Evaluación integral y orientación sobre salud reproductiva.</p>
+            <a class="link-more glam-link" href="#contacto">Reservar →</a>
+          </article>
+
+          <article class="card service glam-card">
+            <div class="glam-icon">
+              <!-- Icono embarazo -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                <circle cx="12" cy="8" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Control Prenatal</h3>
+            <p class="muted">Seguimiento completo durante el embarazo.</p>
+            <a class="link-more glam-link" href="#contacto">Reservar →</a>
+          </article>
+
+          <article class="card service glam-card">
+            <div class="glam-icon">
+              <!-- Icono tubo -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 2v6l-4 10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2l-4-10V2"></path>
+              </svg>
+            </div>
+            <h3>Papanicolaou / VPH</h3>
+            <p class="muted">Tamizaje y diagnóstico oportuno.</p>
+            <a class="link-more glam-link" href="#contacto">Reservar →</a>
+          </article>
+
+          <article class="card service glam-card">
+            <div class="glam-icon">
+              <!-- Icono ecografía -->
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Ecografías</h3>
+            <p class="muted">Ecografía ginecológica y obstétrica con equipos modernos.</p>
+            <a class="link-more glam-link" href="#contacto">Reservar →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="nosotras" class="section bg-soft">
+      <div class="container two-col">
+        <div class="card about-card">
+          <h2>Sobre {{NOMBRE_DOCTORA}}</h2>
+          <p class="muted">{{NOMBRE_DOCTORA}} es especialista en ginecología y obstetricia con amplia experiencia en control prenatal, tamizaje y procedimientos ambulatorios. Comprometida con la atención centrada en la paciente y con foco en prevención.</p>
+          <ul class="list-features">
+            <li>✔ CMP: 12345</li>
+            <li>✔ Experiencia en ecografía y colposcopía</li>
+            <li>✔ Atención personalizada y confidencial</li>
+          </ul>
+        </div>
+
+        <figure class="doctor-figure card">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1200&auto=format&fit=crop" alt="Dra. {{NOMBRE_DOCTORA}}" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonios" class="section">
+      <div class="container">
+        <div class="section-head">
+          <small class="eyebrow">Testimonios</small>
+          <h2>Lo que dicen nuestras pacientes</h2>
+        </div>
+
+        <div class="slider-wrap">
+          <button id="prevBtn" class="slider-btn" aria-label="Anterior testimonio">‹</button>
+          <div id="slider" class="slider" aria-live="polite">
+            <figure class="slide">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Paciente 1" />
+              <blockquote>Me sentí escuchada y acompañada en todo momento. Excelente profesional.</blockquote>
+              <figcaption>— Lucía R.</figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img class="avatar" src="https://images.unsplash.com/photo-1545996124-0c3f1f1b4f99?q=80&w=400&auto=format&fit=crop" alt="Paciente 2" />
+              <blockquote>Instalaciones impecables y atención muy cálida. 100% recomendable.</blockquote>
+              <figcaption>— Carolina P.</figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&auto=format&fit=crop" alt="Paciente 3" />
+              <blockquote>El chequeo fue claro y completo. Salí con todas mis dudas resueltas.</blockquote>
+              <figcaption>— María J.</figcaption>
+            </figure>
+          </div>
+          <button id="nextBtn" class="slider-btn" aria-label="Siguiente testimonio">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="preguntas" class="section bg-soft">
+      <div class="container">
+        <div class="section-head">
+          <small class="eyebrow">Preguntas Frecuentes</small>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq-grid">
+          <details>
+            <summary>¿Con qué frecuencia debo hacerme un Papanicolaou?</summary>
+            <div class="muted">Se recomienda conversarlo según edad y antecedentes; en general cada 1 a 3 años dependiendo del historial y resultados previos.</div>
+          </details>
+
+          <details>
+            <summary>¿Cómo preparar una ecografía?</summary>
+            <div class="muted">Las indicaciones dependen del tipo de ecografía; algunas requieren vejiga llena. Te indicaremos al reservar.</div>
+          </details>
+
+          <details>
+            <summary>¿Aceptan emergencias o solo citas programadas?</summary>
+            <div class="muted">Preferimos citas programadas; para urgencias comunícate por WhatsApp o teléfono para evaluación.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + MAP -->
+    <section id="contacto" class="section">
+      <div class="container contact-grid">
+        <div class="card contact-card">
+          <h2>Contáctanos / Reserva</h2>
+          <p class="muted">Escribe tu consulta o reserva directamente por WhatsApp usando el formulario o los botones de contacto.</p>
+
+          <form id="contactForm" class="form-grid" autocomplete="off">
+            <label>
+              <span>Nombre</span>
+              <input id="c_name" required placeholder="Tu nombre" />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input id="c_email" type="email" placeholder="tu@correo.com" />
+            </label>
+
+            <label class="full">
+              <span>Mensaje</span>
+              <textarea id="c_message" rows="4" placeholder="Escribe tu consulta"></textarea>
+            </label>
+
+            <!-- <div class="form-row">
+              <button type="submit" class="btn btn-primary">Enviar por email</button>
+              <button id="contactWhats" type="button" class="btn btn-whatsapp">Enviar por WhatsApp</button>
+            </div> -->
+          </form>
+        </div>
+
+        <aside class="card info-aside">
+          <h3>Información</h3>
+          <p class="muted"><strong>Dirección:</strong> <span id="addrAside">{{DIRECCION}}</span></p>
+          <p class="muted"><strong>Teléfono / WhatsApp:</strong> <span id="phoneAside">+51 927 486 134</span></p>
+          <!-- <div style="margin-top:12px">
+            <a id="whatsAside" class="btn btn-whatsapp" href="https://wa.me/51927486134" target="_blank">WhatsApp</a>
+          </div> -->
+
+          <div class="map-wrap" aria-hidden="false">
+            <iframe
+              loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.906393018787!2d-77.032!3d-12.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzEyLjAiUyA3N8KwMDEnNTUuMiJX!5e0!3m2!1ses-419!2spe!4v1700000000000"
+              width="100%" height="220" style="border:0;border-radius:10px"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-sm">
+          <div class="logo-circle small">{{LOGO_INICIAL}}</div>
+          <div>
+            <div class="brand-name">{{NOMBRE_DOCTORA}}</div>
+            <div class="brand-sub">Ginecología & Obstetricia</div>
+          </div>
+        </div>
+        <p class="muted">Acompañamos tu salud en cada etapa con enfoque preventivo y equipos modernos.</p>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p class="muted">Tel: <span id="phoneFooter">+51 927 486 134</span></p>
+        <p class="muted">Email: contacto@tusitio.pe</p>
+      </div>
+
+      <div>
+        <h4>Secciones</h4>
+        <nav class="footer-nav">
+          <a href="#servicios">Servicios</a>
+          <a href="#nosotras">Nosotras</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container center small-muted" style="padding:18px 0 36px">
+      © <span id="yearNow"></span> LOADING EOE SAC — Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a id="whatsFloat" class="whats-float" href="https://wa.me/51927486134" aria-label="Chat por WhatsApp" target="_blank">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+/* CSS content (trimmed for zip) - full styles as requested */
+:root{
+  --accent: #F472B6;
+  --accent-700: #E44F9F;
+  --bg-soft: #FFF7FB;
+  --muted: #6B7280;
+  --txt: #0F172A;
+  --card-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  --radius: 14px;
+  --container: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--txt);
+  background:linear-gradient(180deg,#fff 0%, #fffafc 100%);
+}
+img{max-width:100%; display:block}
+a{color:var(--accent); text-decoration:none}
+
+/* utils */
+.container{max-width:var(--container); margin:0 auto; padding:0 18px}
+.row{display:flex; gap:18px; align-items:center}
+
+/* header */
+.site-header{
+  position:sticky; 
+  padding-left: 5px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  z-index:80; 
+  background:rgba(255,255,255,0.9); 
+  border-bottom:1px solid #f1edf5; 
+  backdrop-filter: blur(6px)
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; height:72px; padding:0 18px}
+
+.brand{display:flex; align-items:center; gap:8px}
+
+.logo-circle{
+  width:56px; height:56px; background:linear-gradient(135deg,var(--accent),var(--accent-700));
+  border-radius:12px; color:white; display:grid; place-items:center; font-weight:700; font-size:20px;
+}
+.brand-text .brand-name{font-weight:800; color: #ff66b2;}
+.brand-text .brand-sub{font-size:15px; color:var(--muted)}
+
+.main-nav{display:none; gap:18px}
+.main-nav a{font-weight:600; color:var(--txt)}
+.actions{display:flex; align-items:center; gap:12px}
+
+/* btns */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:9px 14px; font-weight:700; cursor:pointer}
+.btn-primary{background:var(--accent); color:white; box-shadow:0 10px 24px rgba(244,114,182,0.12)}
+.btn-outline{background:transparent; border:1px solid #eee; color:var(--txt)}
+.btn-whatsapp{background:#25D366; color:white; padding:9px 12px; border-radius:10px; font-weight:700}
+
+/* ====== BOTÓN BURGER (3 LINEAS) ====== */
+.burger {
+  display: none; /* Se activa en móviles */
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #ffa703; /* Puedes cambiarlo si el fondo es oscuro */
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* mobile menu */
+/* Menú móvil */
+.mobile-menu {
+  display: none;
+  padding: 12px 18px;
+  border-top: 1px solid #f1edf5;
+  background-color: #ffc400; /* color de fondo dorado suave */
+}
+
+.mobile-menu a{display:block; padding:8px 0; color:var(--txt)}
+
+/* hero */
+.hero{padding:52px 0}
+.hero-grid{display:grid; grid-template-columns:1fr; gap:20px}
+.hero-left .eyebrow{color:var(--accent); font-weight:700; letter-spacing:0.08em}
+.hero-left h1{font-size:34px; margin:8px 0}
+.lead{color:var(--muted); font-size:17px; margin-bottom:16px}
+.hero-ctas{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+.contact-inline{list-style:none; display:flex; gap:18px; color:var(--muted); margin-top:8px}
+
+/* Formulario con iconos dorados a la izquierda */
+.form-dorado .input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-dorado .input-icon .icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: #cfa13f; /* Dorado */
+}
+
+.form-dorado input,
+.form-dorado select,
+.form-dorado textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* espacio para el icono */
+  border-radius: 10px;
+  border: 1px solid #eee;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-dorado input:focus,
+.form-dorado select:focus,
+.form-dorado textarea:focus {
+  border-color: #cfa13f;
+  box-shadow: 0 0 8px rgba(207, 161, 63, 0.6); /* glow dorado */
+  outline: none;
+}
+
+/* Botón estilo premium si quieres un ligero glow dorado también */
+.form-dorado .btn-primary {
+  background: linear-gradient(135deg, #f472b6, #e44f9f);
+  color: white;
+  box-shadow: 0 4px 12px rgba(207, 161, 63, 0.4);
+}
+
+
+/* sections */
+.section{padding:56px 0}
+.section .section-head{max-width:900px; margin:0 auto 28px; text-align:center}
+.section .eyebrow{color:var(--accent); font-weight:700}
+.section h2{font-size:28px; margin:8px 0}
+.section p.muted{color:var(--muted)}
+
+.cards-grid{display:grid; gap:18px; grid-template-columns:1fr}
+.card{background:white; border-radius:14px; padding:18px; box-shadow:var(--card-shadow)}
+.card .card-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(180deg, rgba(244,114,182,0.08), rgba(244,114,182,0.03)); color:var(--accent); font-size:22px; margin-bottom:10px}
+.link-more{display:inline-block; margin-top:12px; color:var(--accent); font-weight:700}
+
+/* two-col */
+.two-col{display:grid; gap:18px}
+.about-card{padding:22px}
+.doctor-figure img{width:100%; height:320px; object-fit:cover; border-radius:12px}
+
+/* image carousel */
+.carrusel {
+  width: auto;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  background-color: #e4e9e6;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carrusel-item{min-width: 100%; height: 100%;}
+
+.carrusel img {
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.carrusel-texto, .carrusel-texto2{
+  position: absolute;
+  top: 130px;
+  left: 65px;        /* Se alinea a la izquierda con un pequeño margen */
+  transform: none;   /* Quitamos el centrado */
+  background: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: parpadeo 1s infinite alternate;
+}
+
+.carrusel-texto { top: 130px; background: rgba(255, 0, 0, 0.8); }
+.carrusel-texto2 { top: 220px; background: rgba(228, 9, 173, 0.8); }
+
+/* Efecto de parpadeo */
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
+
+/* BOTONES DEL CARRUSEL (aislados para no chocar con .btn globales) */
+.btn-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.btn-slide:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.btn-slide.prev { left: 10px; }
+.btn-slide.next { right: 10px; }
+
+/* RESPONSIVE: botones más pequeños en móvil */
+@media(max-width: 600px) {
+  .btn-slide {
+    padding: 8px;
+    font-size: 18px;
+  }
+}
+
+
+
+/* logo header */
+.logo-header { width: 60px; height: auto; margin-left: 0; margin-right: 10px; }
+
+/* ---------------------------
+  MENU / MOBILE TOGGLE FIXES
+   - Asegura que main-nav se muestre solo en desktop
+   - mobile-menu se muestra solo cuando tiene .open
+----------------------------*/
+
+/* por defecto main-nav oculto en mobile (ya tenía esa lógica), burger oculto en desktop */
+.main-nav { display: none; gap: 18px; }
+.burger { display: none; }
+
+/* mobile menu hidden por defecto */
+.mobile-menu { display: none; padding: 12px 18px; border-top: 1px solid #f1edf5; background: rgba(255,255,255,0.98); position: relative; z-index: 90; }
+
+/* cuando se abre (JS añade .open) */
+.mobile-menu.open { display: block; }
+
+/* Mostrar nav en pantallas grandes */
+@media (min-width: 720px) {
+  .main-nav { display: flex; align-items: center; }
+  .mobile-menu { display: none !important; } /* asegurar que no se muestre en desktop */
+  .burger { display: none; }
+}
+
+/* Mostrar burger en pantallas pequeñas */
+@media (max-width: 719px) {
+  .burger { 
+    display: flex;
+    width:44px; 
+    height:44px; 
+    align-items:center; 
+    justify-content:center; 
+    background:transparent; 
+    border-radius:10px; 
+    border:none; 
+    cursor:pointer; 
+  }
+  .main-nav { display: none !important; }
+  /* ajuste para links dentro del mobile menu */
+  .mobile-menu a { display: block; padding:10px 0; color: var(--txt); font-weight:700; }
+  .mobile-menu .btn-whatsapp { margin-top: 12px; display: inline-block; }
+}
+
+/* opcional: mejora visual cuando el mobile menu ocupa la pantalla */
+.mobile-menu { box-shadow: 0 10px 30px rgba(15,23,42,0.06); border-radius: 10px; }
+
+
+/* Fondo Mármol/Seda */
+.servicios-glam {
+  background: url('https://www.toptal.com/designers/subtlepatterns/uploads/marble-pattern.png');
+  background-size: cover;
+  padding: 80px 0;
+}
+
+/* Cards Glam */
+.glam-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glam-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25);
+}
+
+/* Íconos en círculos glass */
+.glam-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Link glam */
+.glam-link {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.glam-link:hover {
+  text-decoration: underline;
+}
+
+/* === Estética Glamour Spa para el Hero === */
+
+.spa-hero {
+  background: linear-gradient(180deg, #fff8fb 0%, #fff 100%);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.spa-eyebrow {
+  color: #cfa13f;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.spa-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #222;
+  background: linear-gradient(90deg, #cfa13f, #ff77b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spa-btn {
+  background: linear-gradient(135deg, #ff77b7, #cfa13f);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 136, 194, 0.3);
+}
+
+.spa-outline {
+  border: 1px solid #cfa13f;
+  color: #cfa13f;
+}
+
+.spa-card {
+  border: 1px solid rgba(207,161,63,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.spa-contact li {
+  color: #cfa13f;
+}
+
+/* ===================== */
+/* FORMULARIO SOLICITAR CITA */
+/* ===================== */
+.hero-card {
+  background: #fff; 
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  margin: 0 auto; /* Centrado */
+  text-align: left;
+  position: relative;
+}
+
+.hero-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b8860b; /* Dorado elegante */
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.hero-card .muted {
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-grid label span {
+  display: block;
+  font-weight: 600;
+  color: #b8860b; /* Dorado */
+  margin-bottom: 6px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid #f0e68c; /* borde dorado claro */
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  border-color: #b8860b; /* dorado más intenso */
+  box-shadow: 0 0 8px rgba(184, 134, 11, 0.3);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #b8860b, #ffd700); /* degradado dorado */
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4);
+}
+
+.small-muted {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Para responsive: centrar el formulario en móviles */
+@media(max-width: 719px){
+  .hero-card {
+    margin: 20px auto;
+    padding: 20px;
+  }
+}
+.mobile-menu a:hover {
+  color: #ffd700; /* dorado brillante */
+}
+
+/* Contenedor del menú móvil */
+.mobile-menu {
+  display: none;
+  padding: 12px 18px;
+  border-top: 1px solid #f1edf5;
+  background-color: #ffc107; /* Fondo dorado suave */
+  /*border-radius: 12px;        Opcional: bordes redondeados */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Abrir menú */
+.mobile-menu.open {
+  display: block;
+}
+
+/* Links dentro del menú */
+.mobile-menu a {
+  display: block;
+  padding: 15px 2px;
+  color: #0a0000; /* dorado */
+  font-weight: 550;
+  /* border-radius: 8px; cajas internas redondeadas */
+  border-bottom: 0.5px solid #000000; /* Línea dorada debajo de cada link */
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: #ec0acef6; /* dorado brillante al hover */
+  color: #fff;
+}
+
+/* Opcional: agregar color de fondo al contenedor del burger */
+.burger {
+  background-color: #fff8e1; /* mismo tono dorado suave */
+}
