@@ -98,4 +98,7 @@ if (bookingForm) {
     const urlWhats = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhats, "_blank");
   });
+
+
+  
 }

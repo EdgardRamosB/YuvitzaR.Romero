@@ -13,6 +13,7 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
+  padding-top: 110px;
   margin:0;
   font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
   color:var(--txt);
@@ -26,16 +27,20 @@ a{color:var(--accent); text-decoration:none}
 .row{display:flex; gap:18px; align-items:center}
 
 /* header */
-.site-header{
-  position:sticky; 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   padding-left: 5px;
   padding-top: 25px;
   padding-bottom: 15px;
-  z-index:80; 
-  background:rgba(255,255,255,0.9); 
-  border-bottom:1px solid #f1edf5; 
-  backdrop-filter: blur(6px)
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #f1edf5;
+  backdrop-filter: blur(6px);
 }
+
 .header-inner{display:flex; align-items:center; justify-content:space-between; height:72px; padding:0 18px}
 
 .brand{display:flex; align-items:center; gap:8px}
@@ -147,7 +152,7 @@ a{color:var(--accent); text-decoration:none}
 .section .section-head{max-width:900px; margin:0 auto 28px; text-align:center}
 .section .eyebrow{color:var(--accent); font-weight:700}
 .section h2{font-size:28px; margin:8px 0}
-.section p.muted{color:var(--muted)}
+/* .section p.muted{color:var(--muted)} */
 
 .cards-grid{display:grid; gap:18px; grid-template-columns:1fr}
 .card{background:white; border-radius:14px; padding:18px; box-shadow:var(--card-shadow)}
@@ -157,7 +162,15 @@ a{color:var(--accent); text-decoration:none}
 /* two-col */
 .two-col{display:grid; gap:18px}
 .about-card{padding:22px}
-.doctor-figure img{width:100%; height:320px; object-fit:cover; border-radius:12px}
+.doctor-figure img {
+  display: block;
+  margin: 0 auto; /* centra horizontal */
+  border-radius: 12px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
 
 /* image carousel */
 .carrusel {
@@ -512,4 +525,101 @@ a{color:var(--accent); text-decoration:none}
 /* Opcional: agregar color de fondo al contenedor del burger */
 .burger {
   background-color: #fff8e1; /* mismo tono dorado suave */
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-whatsapp img {
+  width: 35px;
+  height: 35px;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .carrusel-texto {
+    font-size: 16px;       /* Ajusta según lo que prefieras */
+    padding: 5px 10px;
+  }
+
+  .carrusel-texto2 {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+/* Para pantallas MUY pequeñas */
+@media (max-width: 480px) {
+  .carrusel-texto {
+    font-size: 14px;
+  }
+
+  .carrusel-texto2 {
+    font-size: 12px;
+  }
+}
+
+.about-card {
+  background-color: #111; /* fondo negro elegante */
+  color: #ddd; /* texto general gris claro */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  text-align: left;
+}
+
+.about-card .about-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa; /* plomo elegante */
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-card .about-name::after {
+  content: "";
+  display: block;
+  width: 290px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFC107); /* línea dorada */
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.about-card .about-subtitle {
+  font-size: 20px; /* más grande que el texto normal */
+  font-weight: 800;
+  color: #f0f0f0;
+  margin: 10px 0;
+}
+
+.about-card .about-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.about-card .list-features li {
+  text-align: left;
+  margin: 5px 0;
+  color: #eee;
 }
